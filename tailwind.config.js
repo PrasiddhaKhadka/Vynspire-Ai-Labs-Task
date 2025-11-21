@@ -4,7 +4,17 @@ export default {
      "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        zoomSlow: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.1)' },
+        }
+      },
+      animation: {
+        zoomSlow: 'zoomSlow 20s ease-in-out infinite alternate',
+      }
+    },
   },
   plugins: [],
 }
